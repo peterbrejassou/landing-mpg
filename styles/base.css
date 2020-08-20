@@ -1,0 +1,196 @@
+/* ------------------------ */
+/* --------- VARS --------- */
+/* ------------------------ */
+:root {
+  --mainColor: #599ee4;
+  --feat1: #ffc50d;
+  --feat2: #0090ff;
+  --feat3: #ff4d47;
+  --feat4: #31c5ff;
+}
+
+/* --------------------- */
+/* ------- STYLE ------- */
+/* --------------------- */
+
+h1,
+h2 {
+  font-size: 2rem;
+  line-height: 1.3;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  padding: 20px;
+  font-size: 14px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+body.menu-active {
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo img {
+  width: 150px;
+}
+
+#menu {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: var(--mainColor);
+  top: 100px;
+  left: 0;
+  text-align: center;
+  padding: 15px 0;
+  z-index: 10;
+}
+
+#menu li {
+  display: block;
+  padding: 10px 0;
+  margin: 20px 50px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+#menu li:hover {
+  background: white;
+  font-weight: bold;
+}
+
+#menu li:hover a {
+  color: var(--mainColor);
+}
+
+#menu li.active {
+  background: white;
+  font-weight: bold;
+}
+
+#menu li a {
+  display: block;
+  font-size: 25px;
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+#menu li.active a {
+  color: var(--mainColor);
+}
+
+#mobile-menu-btn {
+  display: inline-block;
+  cursor: pointer;
+}
+
+#mobile-menu-btn .bar1,
+#mobile-menu-btn .bar2,
+#mobile-menu-btn .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+  border-radius: 10px;
+}
+
+#mobile-menu-btn.open .bar1 {
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+#mobile-menu-btn.open .bar2 {
+  opacity: 0;
+}
+
+#mobile-menu-btn.open .bar3 {
+  transform: rotate(45deg) translate(-9px, -7px);
+}
+
+footer {
+  text-align: center;
+  font-style: italic;
+  padding: 25px 0;
+}
+
+/* --------------------------- */
+/* ------ MEDIA QUERIES ------ */
+/* --------------------------- -*/
+@media screen and (min-width: 800px) {
+  body {
+    height: calc(100vh - 40px);
+  }
+
+  header .logo img {
+    width: 200px;
+  }
+
+  #menu {
+    display: block;
+    background: none;
+    position: initial;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    padding: 0;
+    text-align: initial;
+    top: initial;
+    left: initial;
+  }
+
+  #menu li {
+    display: inline-block;
+    padding: 0 10px;
+    text-transform: uppercase;
+    margin: 0;
+    border-radius: 0;
+    cursor: pointer;
+  }
+
+  #menu li:after {
+    content: "";
+    display: block;
+    width: 80%;
+    height: 4px;
+    background: transparent;
+    margin: 5px auto auto auto;
+    border-radius: 5px;
+  }
+
+  #menu li:hover {
+    font-weight: normal;
+  }
+
+  #menu li:hover::after {
+    background: var(--mainColor);
+    transition: 0.4s;
+  }
+
+  #menu li.active {
+    font-weight: normal;
+  }
+
+  #menu li.active::after {
+    background: var(--mainColor);
+  }
+
+  #menu li a {
+    text-decoration: none;
+    color: #515151;
+    transition: 0.3s;
+    font-size: 1rem;
+  }
+
+  #mobile-menu-btn {
+    display: none;
+  }
+}
