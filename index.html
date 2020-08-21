@@ -7,16 +7,20 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;0,900;1,400&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/base.css" />
     <link rel="stylesheet" href="styles/index.css" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="scripts/script.js"></script>
     <title>Mon Petit Garage</title>
   </head>
   <body>
     <header>
       <a class="logo" href="index.html"
-        ><img src="img/logo.svg" alt="Logo Mon petit garage"
+        ><img src="img/icons/logo.svg" alt="Logo Mon petit garage"
       /></a>
       <ul id="menu">
         <li><a href="contact.html">Contact</a></li>
@@ -36,13 +40,17 @@
         </p>
         <p class="availability">Disponible bientôt :</p>
         <div class="stores">
-          <a href="#"><img src="img/appstore.png" alt="appstore" /></a>
+          <a href="#"><img src="img/icons/appstore.png" alt="appstore" /></a>
           <span></span>
-          <a href="#"><img src="img/playstore.png" alt="playstore" /></a>
+          <a href="#"><img src="img/icons/playstore.png" alt="playstore" /></a>
         </div>
       </div>
       <div class="mockup">
-        <img src="img/mockup_home.png" alt="Mockup application" />
+        <div class="slider">
+          <img src="img/mockups/mockup_home.png" alt="Mockup application home" />
+          <img src="img/mockups/mockup_details.png" alt="Mockup application details" />
+          <img src="img/mockups/mockup_references.png" alt="Mockup application références" />
+        </div>
       </div>
     </section>
 
@@ -51,7 +59,7 @@
       <div class="features-grid">
         <div id="feat-1" class="feature">
           <div class="icon">
-            <img src="img/wrench.png" alt="Icône de clé à molette" />
+            <img src="img/icons/wrench.png" alt="Icône de clé à molette" />
           </div>
           <p class="title">Suivez l'entretien de vos véhicules</p>
           <p class="description-text">
@@ -60,7 +68,7 @@
         </div>
         <div id="feat-2" class="feature">
           <div class="icon">
-            <img src="img/catalogue.png" alt="Icône de catalogue" />
+            <img src="img/icons/catalogue.png" alt="Icône de catalogue" />
           </div>
           <p class="title">Conservez les références de vos pièces</p>
           <p class="description-text">
@@ -69,7 +77,7 @@
         </div>
         <div id="feat-3" class="feature">
           <div class="icon">
-            <img src="img/bell.png" alt="Icône de cloche" />
+            <img src="img/icons/bell.png" alt="Icône de cloche" />
           </div>
           <p class="title">Soyez alerté lorsqu'il est temps de réaliser un entretien</p>
           <p class="description-text">
@@ -78,7 +86,7 @@
         </div>
         <div id="feat-4" class="feature">
           <div class="icon">
-            <img src="img/database.png" alt="Icône de base de données" />
+            <img src="img/icons/database.png" alt="Icône de base de données" />
           </div>
           <p class="title">Vos données sont entièrement sous votre contrôle</p>
           <p class="description-text">
@@ -91,3 +99,6 @@
     <footer>©2020 Tous droits réservés - Icons by <a href="https://icons8.com">Icons8</a></footer>
   </body>
 </html>
+
+
+

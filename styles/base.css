@@ -122,14 +122,18 @@ footer {
   padding: 25px 0;
 }
 
+.btn{
+  background: var(--mainColor);
+  color: white;
+  border-radius: 30px;
+  padding: 6px 15px;
+  text-decoration: none;
+}
+
 /* --------------------------- */
 /* ------ MEDIA QUERIES ------ */
 /* --------------------------- -*/
 @media screen and (min-width: 800px) {
-  body {
-    height: calc(100vh - 40px);
-  }
-
   header .logo img {
     width: 200px;
   }
@@ -195,6 +199,6 @@ footer {
   }
 
   footer{
-    margin-top: 30px;
+    margin-top: 50px;
   }
 }

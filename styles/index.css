@@ -137,9 +137,15 @@ section.features .features-grid .feature .description-text {
     text-align: center;
   }
 
-  section.main .mockup img {
+  section.main .mockup .slider {
+    width: 280px;
+    margin: auto;
+  }
+
+  section.main .mockup .slider img {
     width: auto;
-    height: 70vh;
+    height: auto;
+    outline: none;
   }
 
   section.features .mockup-features {
@@ -155,6 +161,6 @@ section.features .features-grid .feature .description-text {
   section.features .features-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 80px;
+    grid-gap: 60px;
   }
 }

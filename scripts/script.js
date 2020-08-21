@@ -1,25 +1,37 @@
-document.addEventListener("DOMContentLoaded", function () {
+$(document).ready(function() {
   // Animate mobile menu button and display mobile menu
-  document
-    .getElementById("mobile-menu-btn")
-    .addEventListener("click", function () {
+  $("#mobile-menu-btn").click(function () {
       // Change l'état du bouton
-      this.classList.toggle("open");
+      $(this).toggleClass("open");
       // Affiche ou masque le menu mobile
-      var mobileMenu = document.getElementById("menu");
-      mobileMenu.style.display =
-        mobileMenu.style.display === "block" ? "none" : "block";
+      var mobileMenu = $("#menu");
+      if($("#menu").is(":hidden")){
+        $("#menu").show();
+      } else {
+        $("#menu").hide();
+      }
       // Overflow hidden sur le body pour bloquer le scroll
-      document.body.classList.toggle("menu-active");
+      $(document).body.toggleClass("menu-active")
     });
 
-  document
-    .querySelector(".input-effect input")
-    .addEventListener("focusout", function () {
+  $(".input-effect input").focusout(function () {
       if (this.value != "") {
         this.classList.add("has-content");
       } else {
         this.classList.remove("has-content");
       }
     });
+
+  $('.slider').slick({
+    autoplay: true,
+    autoplaySpeed: 5000,
+    arrows: false,
+    dots: false,
+    fade: true,
+    infinite: true,
+    pauseOnHover: true,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  });
 });
+

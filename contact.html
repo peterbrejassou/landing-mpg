@@ -17,7 +17,7 @@
   <body>
     <header>
       <a class="logo" href="index.html"
-        ><img src="img/logo.svg" alt="Logo Mon petit garage"
+        ><img src="img/icons/logo.svg" alt="Logo Mon petit garage"
       /></a>
       <ul id="menu">
         <li class="active"><a href="contact.html">Contact</a></li>
@@ -64,3 +64,20 @@
     <footer>©2020 Tous droits réservés - Icons by <a href="https://icons8.com">Icons8</a></footer>
   </body>
 </html>
+
+
+<?php 
+include 'config.php';
+
+function sendMail(){
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  $message = $_POST['message'];
+  $formcontent = 'Prénom et nom : ' . $name . "\nMessage : \n" . $message;
+  $recipient = EMAIL_ADMIN;
+  $subject = "MPG Contact";
+  $mailheader = "From: $email \r\n";
+  mail($recipient, $subject, $formcontent, $mailheader) or die("Error send mail");
+  echo 'Mail envoyé avec succès.';
+}
+?>
