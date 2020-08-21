@@ -108,8 +108,10 @@ section.features .features-grid .feature .description-text {
 /* --------------------------- -*/
 @media screen and (min-width: 800px) {
   section.main {
-    margin-top: 80px;
     display: flex;
+    align-items: center;
+    height: calc(100vh - 110px);
+    margin-top: 0;
   }
 
   section.main .description,
