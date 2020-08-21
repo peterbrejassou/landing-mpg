@@ -41,6 +41,12 @@ section.contact form label {
   display: block;
 }
 
+section.contact .instructions {
+  font-size: 1.2em;
+  line-height: 1.3;
+  margin-bottom: 30px;
+}
+
 /* --------------------------- */
 /* ------ MEDIA QUERIES ------ */
 /* --------------------------- -*/
@@ -52,11 +58,5 @@ section.contact form label {
 
   section.contact h1 {
     margin-bottom: 10px;
-  }
-
-  section.contact .instructions {
-    font-size: 1.2em;
-    line-height: 1.3;
-    margin-bottom: 30px;
   }
 }
